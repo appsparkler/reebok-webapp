@@ -5,5 +5,5 @@
   xmlns:jcr="http://www.jcp.org/jcr/1.0"
   jcr:primaryType="cq:Component"
   jcr:title="Bootstrap Carousel"
-  componentGroup="Reebok Experiences"
+  componentGroup="Reebok Components"
 />
