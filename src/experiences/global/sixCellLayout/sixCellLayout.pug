@@ -1,8 +1,56 @@
 if process.env.isProd
-  div(
+  div.container(
     data-sly-test="${currentStyle}"
     is='xp-global-sixCellLayout-${resource.name}-${resource.parent.name}' 
   )
+    div.row.bg-dark
+      .col-sm-9.p-0.d-flex.flex-wrap
+        // LEFT-SIDE - ROW-1
+        .row.m-0.p-0
+          // CARD 1
+          .col-md-8.p-0.d-flex
+            .my-card-content.bg-white.p-2.m-2.d-flex.flex-column
+              img.img.img-fluid(src='https://via.placeholder.com/700x250')
+              h4 Heading 1
+              p
+                | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old...
+          // CARD 2
+          .col-md-4.p-0.d-flex
+            .my-card-content.bg-white.p-2.m-2.d-flex.flex-column
+              img.img.img-fluid(src='https://via.placeholder.com/400x303')
+              h4 Heading 1
+              p
+                | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old...
+        .row.m-0
+          // CARD 3
+          .col-md-4.p-0.d-flex
+            .my-card-content.bg-white.p-2.m-2.d-flex.flex-column
+              img.img.img-fluid(src='https://via.placeholder.com/400x250')
+              h4 Heading 1
+              p
+                | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old...
+          // CARD 4
+          .col-md-4.p-0.d-flex
+            .my-card-content.bg-white.p-2.m-2.d-flex.flex-column
+              img.img.img-fluid(src='https://via.placeholder.com/400x250')
+              h4 Heading 1
+              p
+                | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old...
+          // CARD 5
+          .col-md-4.p-0.d-flex
+            .my-card-content.bg-white.p-2.m-2.d-flex.flex-column
+              img.img.img-fluid(src='https://via.placeholder.com/400x250')
+              h4 Heading 1
+              p
+                | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old...
+      .col-sm-3.p-0
+        .bg-white.m-2.p-2.position-absolute.all-0.d-flex.flex-column
+          h4 Social Sidebar...
+          hr
+          .d-flex.overflow-auto
+            p
+              | Topping candy tiramisu souffl&eacute; fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. opping candy tiramisu souffl&eacute; fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. opping candy tiramisu souffl&eacute; fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva
+
   
   sly(data-sly-test="${wcmmode.isEdit}")
     div(
