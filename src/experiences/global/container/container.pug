@@ -15,6 +15,7 @@ if process.env.isProd
       span.badge.badge-info Please update Policy for ${resource.name}
     
 else 
-  
-  div.container(is="xp-global-container-sample")
-    h1 The Reebok Bootstrap Container Experience 
+
+    div.container(is="xp-global-container-sample")
+      div.row
+        include /components/global/bootstrapCarousel/bootstrapCarousel

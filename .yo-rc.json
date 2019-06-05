@@ -29,6 +29,20 @@
           ]
         }
       }
+    },
+    "components": {
+      "global": {
+        "bootstrapCarousel": {
+          "name": "bootstrapCarousel",
+          "title": "Bootstrap Carousel",
+          "description": "This is the Bootstrap Carousel",
+          "chunks": [
+            "chunk-vendors",
+            "chunk-common",
+            "components/global/bootstrapCarousel/publishLibs"
+          ]
+        }
+      }
     }
   }
 }

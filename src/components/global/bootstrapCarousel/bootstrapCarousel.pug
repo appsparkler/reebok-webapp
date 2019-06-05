@@ -1,0 +1,32 @@
+if process.env.isProd
+  div(
+    data-sly-test="${currentStyle}"
+    is='xp-global-bootstrapCarousel-${resource.name}-${resource.parent.name}' 
+  )
+  
+  sly(data-sly-test="${wcmmode.isEdit}")
+    div(
+      class="container border border-info" 
+      data-sly-test="${!currentStyle}"
+    )
+      span.badge.badge-info Please update Policy for ${resource.name}
+    
+else 
+  
+    div#carouselExampleControls.carousel.slide(
+      data-ride='carousel' 
+      is="xp-global-bootstrapCarousel-sample"
+    )
+      div.carousel-inner
+        div.carousel-item.active
+          img.d-block.w-100(src='https://placehold.it/1200x400/00f/fff?text=Slide%201', alt='Slide 2')
+        div.carousel-item
+          img.d-block.w-100(src='https://placehold.it/1200x400/0f0/fff?text=Slide%202', alt='Slide 2')
+        div.carousel-item
+          img.d-block.w-100(src='https://placehold.it/1200x400/0ff/fff?text=Slide%203', alt='Slide 3')
+      a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
+        span.carousel-control-prev-icon(aria-hidden='true')
+        span.sr-only Previous
+      a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
+        span.carousel-control-next-icon(aria-hidden='true')
+        span.sr-only Next

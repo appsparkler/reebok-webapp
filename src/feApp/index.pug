@@ -9,23 +9,8 @@ head
 body
   h1.bg-dark.text-success.p-2 This is the construct...
   div#app
-    div.container
     include /experiences/global/container/container
-      div#carouselExampleControls.carousel.slide(data-ride='carousel')
-        div.carousel-inner
-          div.carousel-item.active
-            img.d-block.w-100(src='https://placehold.it/1200x400/00f/fff?text=Slide%201', alt='Slide 2')
-          div.carousel-item
-            img.d-block.w-100(src='https://placehold.it/1200x400/0f0/fff?text=Slide%202', alt='Slide 2')
-          div.carousel-item
-            img.d-block.w-100(src='https://placehold.it/1200x400/0ff/fff?text=Slide%203', alt='Slide 3')
-        a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
-          span.carousel-control-prev-icon(aria-hidden='true')
-          span.sr-only Previous
-        a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
-          span.carousel-control-next-icon(aria-hidden='true')
-          span.sr-only Next
-
+    
     //- header.masthead(style="background-image: url('https://placehold.it/1200x400?text=hello')")
     //-   div.overlay
     //-   div.container
