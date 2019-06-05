@@ -15,7 +15,11 @@ if process.env.isProd
       span.badge.badge-info Please update Policy for ${resource.name}
     
 else 
-
-    div.container(is="xp-global-container-sample")
+  
+    div.container(is="xp-global-container-sample-1")
       div.row
+        include /components/global/navbar/navbar
+    
+    div.container(is="xp-global-container-sample-2")
+      div.row  
         include /components/global/bootstrapCarousel/bootstrapCarousel

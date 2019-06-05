@@ -2,13 +2,13 @@ if process.env.isProd
   nav(
     data-sly-test="${currentStyle}"
     is='xp-global-navbar-${resource.name}-${resource.parent.name}' 
-    class=".navbar.navbar-expand-lg ${currentStyle.navCSSClasses}"
+    class="navbar navbar-expand-lg w-100 ${currentStyle.navCSSClasses}"
   )
     a.navbar-brand(href='#') Navbar
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
-      ul.navbar-nav.mr-auto
+      ul.navbar-nav
         li.nav-item.active
           a.nav-link(href='#')
             | Home 
@@ -25,7 +25,7 @@ if process.env.isProd
             a.dropdown-item(href='#') Something else here
         li.nav-item
           a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
-      form.form-inline.my-2.my-lg-0
+      form.form-inline.my-2.my-lg-0.ml-auto
         input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
         button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search 
 
@@ -39,15 +39,15 @@ if process.env.isProd
     
 else 
   
-  nav.navbar.navbar-expand-lg(
+  nav(
     is="xp-global-navbar-sample"
-    class="navbar-dark bg-primary"
+    class="navbar navbar-expand-lg navbar-dark bg-primary w-100"
   )
     a.navbar-brand(href='#') Navbar
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
-      ul.navbar-nav.mr-auto
+      ul.navbar-nav
         li.nav-item.active
           a.nav-link(href='#')
             | Home 
@@ -64,6 +64,6 @@ else
             a.dropdown-item(href='#') Something else here
         li.nav-item
           a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
-      form.form-inline.my-2.my-lg-0
+      form.form-inline.my-2.my-lg-0.ml-auto
         input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
         button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search 
