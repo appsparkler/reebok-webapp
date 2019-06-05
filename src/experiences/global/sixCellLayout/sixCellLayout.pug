@@ -3,7 +3,7 @@ if process.env.isProd
     data-sly-test="${currentStyle}"
     is='xp-global-sixCellLayout-${resource.name}-${resource.parent.name}' 
   )
-    div.row.bg-dark
+    div(class="row ${currentStyle.innerContainerCSSClass}")
       .col-sm-9.p-0.d-flex.flex-wrap
         // LEFT-SIDE - ROW-1
         .row.m-0.p-0
@@ -62,7 +62,7 @@ if process.env.isProd
 else 
   
     div.container(is="xp-global-sixCellLayout-sample")
-      .row.bg-dark
+      .row
         .col-sm-9.p-0.d-flex.flex-wrap
           // LEFT-SIDE - ROW-1
           .row.m-0.p-0
