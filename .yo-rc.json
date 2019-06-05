@@ -41,6 +41,16 @@
             "chunk-common",
             "components/global/bootstrapCarousel/publishLibs"
           ]
+        },
+        "navbar": {
+          "name": "navbar",
+          "title": "Bootstrap Navbar",
+          "description": "This is the Reebok Bootstrap Navbar",
+          "chunks": [
+            "chunk-vendors",
+            "chunk-common",
+            "components/global/navbar/publishLibs"
+          ]
         }
       }
     }
