@@ -27,6 +27,16 @@
             "chunk-common",
             "experiences/global/navbar/publishLibs"
           ]
+        },
+        "testXp": {
+          "name": "testXp",
+          "title": "Test Experience",
+          "description": "This is a test experience",
+          "chunks": [
+            "chunk-vendors",
+            "chunk-common",
+            "experiences/global/testXp/publishLibs"
+          ]
         }
       }
     }
