@@ -27,6 +27,16 @@
             "chunk-common",
             "experiences/global/container/publishLibs"
           ]
+        },
+        "sixCellLayout": {
+          "name": "sixCellLayout",
+          "title": "Reebok Six Cell Layout",
+          "description": "This is a six cell layout with sidebar",
+          "chunks": [
+            "chunk-vendors",
+            "chunk-common",
+            "experiences/global/sixCellLayout/publishLibs"
+          ]
         }
       }
     },
