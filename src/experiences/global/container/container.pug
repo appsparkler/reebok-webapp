@@ -3,6 +3,9 @@ if process.env.isProd
     data-sly-test="${currentStyle}"
     is='xp-global-container-${resource.name}-${resource.parent.name}' 
   )
+    div(class="${currentStyle.outerContainerCSSClass}")
+      div(class="${currentStyle.innerContainerCSSClass}")
+        sly(data-sly-resource="${ 'xp-global-container' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
   
   sly(data-sly-test="${wcmmode.isEdit}")
     div(
@@ -13,5 +16,5 @@ if process.env.isProd
     
 else 
   
-  div(is="xp-global-container-sample")
+  div.container(is="xp-global-container-sample")
     h1 The Reebok Bootstrap Container Experience 
