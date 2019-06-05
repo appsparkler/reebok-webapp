@@ -15,6 +15,20 @@
           ]
         }
       }
+    },
+    "experiences": {
+      "global": {
+        "container": {
+          "name": "container",
+          "title": "Reebok Bootstrap Container",
+          "description": "This is the Reebok Global Bootstrap Container",
+          "chunks": [
+            "chunk-vendors",
+            "chunk-common",
+            "experiences/global/container/publishLibs"
+          ]
+        }
+      }
     }
   }
 }
