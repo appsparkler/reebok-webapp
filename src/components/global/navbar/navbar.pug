@@ -27,7 +27,8 @@ if process.env.isProd
           a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
       form.form-inline.my-2.my-lg-0.ml-auto
         input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
-        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search 
+        span
+          sly(data-sly-resource="${ 'navButton' @ resourceType='/apps/reebok/dist/components/bootstrap/card' }") 
 
   
   sly(data-sly-test="${wcmmode.isEdit}")
@@ -66,4 +67,6 @@ else
           a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
       form.form-inline.my-2.my-lg-0.ml-auto
         input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
-        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search 
+        //- button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+        span 
+          include /components/bootstrap/button/button
