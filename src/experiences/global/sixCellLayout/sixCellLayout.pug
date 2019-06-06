@@ -10,44 +10,23 @@ if process.env.isProd
         .row.m-0.p-0
           // CARD 1
           .col-md-8.p-0.d-flex
-            div.card
-                img.card-img-top(
-                  src="https://via.placeholder.com/700x250" 
-                  alt="Card"
-                )
-                div.card-body
-                  h5.card-title Card title
-                  p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-                  a.btn.btn-primary(href="#") Go somewhere
+            sly(data-sly-resource="${ 'cell1' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
           // CARD 2
           .col-md-4.p-0.d-flex
-            .my-card-content.bg-white.p-2.m-2.d-flex.flex-column
-              img.img.img-fluid(src='https://via.placeholder.com/400x303')
-              h4 Heading 1
-              p
-                | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old...
+            sly(data-sly-resource="${ 'cell2' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
         .row.m-0
           // CARD 3
           .col-md-4.p-0.d-flex
-            .my-card-content.bg-white.p-2.m-2.d-flex.flex-column
-              img.img.img-fluid(src='https://via.placeholder.com/400x250')
-              h4 Heading 1
-              p
-                | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old...
+            sly(data-sly-resource="${ 'cell3' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+
           // CARD 4
           .col-md-4.p-0.d-flex
-            .my-card-content.bg-white.p-2.m-2.d-flex.flex-column
-              img.img.img-fluid(src='https://via.placeholder.com/400x250')
-              h4 Heading 1
-              p
-                | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old...
+            sly(data-sly-resource="${ 'cell4' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+              
           // CARD 5
           .col-md-4.p-0.d-flex
-            .my-card-content.bg-white.p-2.m-2.d-flex.flex-column
-              img.img.img-fluid(src='https://via.placeholder.com/400x250')
-              h4 Heading 1
-              p
-                | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old...
+            sly(data-sly-resource="${ 'cell5' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+              
       .col-sm-3.p-0
         .bg-white.m-2.p-2.position-absolute.all-0.d-flex.flex-column
           h4 Social Sidebar...
@@ -74,20 +53,20 @@ else
           .row.m-0.p-0
             // CARD 1
             .col-md-8.p-0.d-flex.p-2
-              +card("xp-bootstrap-card-sample-1", "https://via.placeholder.com/700x250")
+              +card("xp-bootstrap-card-sample-1")(linkClass="btn btn-primary", imgSrc="https://via.placeholder.com/700x250")
             // CARD 2
             .col-md-4.p-0.d-flex.p-2
-              +card("xp-bootstrap-card-sample-2",'https://via.placeholder.com/400x310')
+              +card("xp-bootstrap-card-sample-2")(linkClass="btn btn-primary" imgSrc="https://via.placeholder.com/400x310")
           .row.m-0
             // CARD 3
             .col-md-4.p-0.d-flex.p-2
-              +card("xp-bootstrap-card-sample-3", 'https://via.placeholder.com/400x250')
+              +card("xp-bootstrap-card-sample-3")(imgSrc="https://via.placeholder.com/400x250" linkClass="btn btn-primary")
             // CARD 4
             .col-md-4.p-0.d-flex.p-2
-              +card("xp-bootstrap-card-sample",'https://via.placeholder.com/400x250')
+              +card("xp-bootstrap-card-sample")(imgSrc="https://via.placeholder.com/400x250" linkClass="btn btn-primary")
             // CARD 5
             .col-md-4.p-0.d-flex.p-2
-              +card("xp-bootstrap-card-sample", 'https://via.placeholder.com/400x250')
+              +card("xp-bootstrap-card-sample")(imgSrc="https://via.placeholder.com/400x250" linkClass="btn btn-primary")
 
         div.col-sm-3.p-0
           div.bg-white.m-2.p-2.position-absolute.all-0.d-flex.flex-column.border.border-1

@@ -1,25 +1,28 @@
+mixin card(is)
+  div.card.rounded-0.p-2.border.border-1(is=is)
+      img.card-img-top.rounded-0(
+        src!=attributes.imgSrc
+        alt="Card"
+      )
+      div.card-body.justify-content-between.d-flex.flex-column
+        h5.card-title Card title
+        p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+        a.mr-auto.btn-sm(href="#" class!=attributes.linkClass) Go somewhere
+        
 if process.env.isProd
-  div(
-    data-sly-test="${currentStyle}"
-    is='xp-bootstrap-card-${resource.name}-${resource.parent.name}' 
+  //- 
+  sly(
+    data-sly-test="${currentStyle}" 
   )
+    +card("xp-bootstrap-card-${resource.name}-${resource.parent.name}")(
+      linkClass="btn btn-primary"
+      imgSrc="${properties.imgSrc}"
+    )
   
+  //- 
   sly(data-sly-test="${wcmmode.isEdit}")
     div(
       class="container border border-info" 
       data-sly-test="${!currentStyle}"
     )
       span.badge.badge-info Please update Policy for ${resource.name}
-    
-else 
-  
-  mixin card(is,imgSrc)
-    div.card.rounded-0.p-2.border.border-1(is=is)
-        img.card-img-top.rounded-0(
-          src=imgSrc
-          alt="Card"
-        )
-        div.card-body.justify-content-between.d-flex.flex-column
-          h5.card-title Card title
-          p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-          a.btn.btn-primary(href="#") Go somewhere
