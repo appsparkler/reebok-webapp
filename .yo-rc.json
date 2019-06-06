@@ -62,6 +62,18 @@
             "components/global/navbar/publishLibs"
           ]
         }
+      },
+      "bootstrap": {
+        "card": {
+          "name": "card",
+          "title": "Reebok Card",
+          "description": "This is the Reebok Card Component",
+          "chunks": [
+            "chunk-vendors",
+            "chunk-common",
+            "components/global/card/publishLibs"
+          ]
+        }
       }
     }
   }
