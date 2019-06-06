@@ -4,34 +4,34 @@ if process.env.isProd
     is='xp-global-sixCellLayout-${resource.name}-${resource.parent.name}'
     class="${currentStyle.outerContainerCSSClass}" 
   )
-  div(class="row ${currentStyle.innerContainerCSSClass}")
-    div.col-sm-9.p-0.d-flex.flex-wrap
-      // LEFT-SIDE - ROW-1
-      div.row.m-0.p-0.w-100
-        // CARD 1
-        div.col-md-8.p-0.d-flex.p-2
-          sly(data-sly-resource="${ 'cell1' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
-        // CARD 2
-        div.col-md-4.p-0.d-flex.p-2
-          sly(data-sly-resource="${ 'cell1' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
-      div.row.m-0
-        // CARD 3
-        div.col-md-4.p-0.d-flex.p-2
-          sly(data-sly-resource="${ 'cell1' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
-        // CARD 4
-        div.col-md-4.p-0.d-flex.p-2
-          sly(data-sly-resource="${ 'cell1' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
-        // CARD 5
-        div.col-md-4.p-0.d-flex.p-2
-          sly(data-sly-resource="${ 'cell1' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+    div(class="row ${currentStyle.innerContainerCSSClass}")
+      div.col-sm-9.p-0.d-flex.flex-wrap
+        // LEFT-SIDE - ROW-1
+        div.row.m-0.p-0.w-100
+          // CARD 1
+          div.col-md-8.p-0.d-flex.p-2.w-100
+            sly(data-sly-resource="${ 'cell1' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+          // CARD 2
+          div.col-md-4.p-0.d-flex.p-2.w-100
+            sly(data-sly-resource="${ 'cell2' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+        div.row.m-0.p-0.w-100
+          // CARD 3
+          div.col-md-4.p-0.d-flex.p-2.w-100
+            sly(data-sly-resource="${ 'cell3' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+          // CARD 4
+          div.col-md-4.p-0.d-flex.p-2.w-100
+            sly(data-sly-resource="${ 'cell4' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+          // CARD 5
+          div.col-md-4.p-0.d-flex.p-2.w-100
+            sly(data-sly-resource="${ 'cell5' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
 
-    div.col-sm-3.p-0
-      div.bg-white.m-2.p-2.position-absolute.all-0.d-flex.flex-column.border.border-1
-        h4 Social Sidebar...
-        hr
-        div.d-flex.overflow-auto
-          p
-            | Topping candy tiramisu souffl&eacute; fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. opping candy tiramisu souffl&eacute; fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. opping candy tiramisu souffl&eacute; fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva
+      div.col-sm-3.p-0
+        div.bg-white.m-2.p-2.position-absolute.all-0.d-flex.flex-column.border.border-1
+          h4 Social Sidebar...
+          hr
+          div.d-flex.overflow-auto
+            p
+              | Topping candy tiramisu souffl&eacute; fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. opping candy tiramisu souffl&eacute; fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. opping candy tiramisu souffl&eacute; fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva
 
   sly(data-sly-test="${wcmmode.isEdit}")
     div(

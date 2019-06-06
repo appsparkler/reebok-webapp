@@ -14,13 +14,13 @@
                 sling:resourceType="granite/ui/components/coral/foundation/container"
                 margin="{Boolean}true">
                 <items jcr:primaryType="nt:unstructured">
-                    <imgSrc
+                    <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        emptyText="Image SRC..."
-                        fieldDescription="The link to image"
-                        fieldLabel="Image Source"
-                        name="./imgSrc"/>
+                        emptyText="Sample Text Field..."
+                        fieldDescription="This is a sample textfield..."
+                        fieldLabel="Sample Text Field"
+                        name="./sampleItem"/>
                 </items>
             </properties>
         </items>
