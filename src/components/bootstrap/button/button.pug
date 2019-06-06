@@ -1,8 +1,9 @@
 if process.env.isProd
-  div(
-    data-sly-test="${currentStyle}"
-    is='xp-bootstrap-button-${resource.name}-${resource.parent.name}' 
-  )
+  button.btn.btn-primary(
+      data-sly-test="${currentStyle}"
+      is='xp-bootstrap-button-${resource.name}-${resource.parent.name}'
+      type="button"
+    ) Primary
   
   sly(data-sly-test="${wcmmode.isEdit}")
     div(
@@ -13,5 +14,7 @@ if process.env.isProd
     
 else 
   
-  div(is="xp-bootstrap-button-sample")
-    h1 The Reebok Button Component 
+  button.btn.btn-primary(
+    is="xp-bootstrap-button-sample"
+    type="button"
+  ) Primary
