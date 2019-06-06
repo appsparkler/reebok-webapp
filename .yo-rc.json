@@ -37,6 +37,16 @@
             "chunk-common",
             "experiences/global/sixCellLayout/publishLibs"
           ]
+        },
+        "2Column": {
+          "name": "2Column",
+          "title": "Reebok 2 Column Layout",
+          "description": "",
+          "chunks": [
+            "chunk-vendors",
+            "chunk-common",
+            "experiences/global/2Column/publishLibs"
+          ]
         }
       }
     },
