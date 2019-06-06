@@ -1,7 +1,8 @@
 if process.env.isProd
-  div.container(
+  div(
     data-sly-test="${currentStyle}"
-    is='xp-global-sixCellLayout-${resource.name}-${resource.parent.name}' 
+    is='xp-global-sixCellLayout-${resource.name}-${resource.parent.name}'
+    class="${currentStyle.outerContainerCSSClass}" 
   )
     div(class="row ${currentStyle.innerContainerCSSClass}")
       .col-sm-9.p-0.d-flex.flex-wrap

@@ -13,12 +13,20 @@
     <items jcr:primaryType="nt:unstructured">
       <container jcr:primaryType="nt:unstructured" maximized="true" sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
+          <outerContainerCSSClass
+            jcr:primaryType="nt:unstructured"
+              sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
+              fieldDescription="CSS classes for the outer container"
+              fieldLabel="Outer Container CSS Class"
+              name="./outerContainerCSSClass"/>
+
           <innerContainerCSSClass
               jcr:primaryType="nt:unstructured"
               sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
               fieldDescription="CSS classes for the inner container"
               fieldLabel="Inner Container CSS Class"
               name="./innerContainerCSSClass"/>
+
         </items>
       </container>
     </items>
