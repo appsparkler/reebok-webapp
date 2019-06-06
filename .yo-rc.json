@@ -83,6 +83,16 @@
             "chunk-common",
             "components/global/card/publishLibs"
           ]
+        },
+        "button": {
+          "name": "button",
+          "title": "Reebok Button",
+          "description": "THis is the reebok Button",
+          "chunks": [
+            "chunk-vendors",
+            "chunk-common",
+            "components/global/button/publishLibs"
+          ]
         }
       }
     }
