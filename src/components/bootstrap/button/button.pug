@@ -1,9 +1,10 @@
 if process.env.isProd
-  button.btn.btn-primary(
+  button(
       data-sly-test="${currentStyle}"
       is='xp-bootstrap-button-${resource.name}-${resource.parent.name}'
       type="button"
-    ) Primary
+      class="${currentStyle.buttonCSSClasses}"
+    ) ${properties.buttonTitle}
   
   sly(data-sly-test="${wcmmode.isEdit}")
     div(
