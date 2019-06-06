@@ -9,11 +9,11 @@ head
 body
   h1.bg-dark.text-success.p-2 This is the construct...
   div#app
-    include /components/bootstrap/card
+    include /experiences/global/sixCellLayout/sixCellLayout
     
-  div.col-3
-    +card("xp-bootstrap-card-${resource.name}-${resource.parent.name}")(
-      linkClass="btn btn-primary"
-      imgSrc="${properties.imgSrc}"
-   )
+  //- div.col-3
+  //-   +card("xp-bootstrap-card-${resource.name}-${resource.parent.name}")(
+  //-     linkClass="btn btn-primary"
+  //-     imgSrc="${properties.imgSrc}"
+  //-   )
     
