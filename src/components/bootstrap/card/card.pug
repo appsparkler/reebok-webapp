@@ -13,5 +13,13 @@ if process.env.isProd
     
 else 
   
-  div(is="xp-bootstrap-card-sample")
-    h1 The Reebok Card Component 
+  mixin card(is,imgSrc)
+    div.card.rounded-0.p-2.border.border-1(is=is)
+        img.card-img-top.rounded-0(
+          src=imgSrc
+          alt="Card"
+        )
+        div.card-body.justify-content-between.d-flex.flex-column
+          h5.card-title Card title
+          p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+          a.btn.btn-primary(href="#") Go somewhere
