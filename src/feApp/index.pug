@@ -9,5 +9,152 @@ head
 body
   h1.bg-dark.text-success.p-2 This is the construct...
   #app
-    include /components/global/navbar/navbar
-    include /experiences/global/2Column/2Column
+    .root.responsivegrid
+      .aem-Grid.aem-Grid--12.aem-Grid--default--12
+        .global-container.aem-GridColumn.aem-GridColumn--default--12
+          div(is='xp-global-container-container_598092831-root')
+            .container.my-1
+              .row
+                .aem-Grid.aem-Grid--12.aem-Grid--default--12
+                  .global-navbar.aem-GridColumn.aem-GridColumn--default--12
+                    nav.navbar.navbar-expand-lg.w-100.navbar-dark.bg-dark(is='xp-global-navbar-navbar-xp-global-container')
+                      a.navbar-brand(href='#') Navbar
+                      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                        span.navbar-toggler-icon
+                      #navbarSupportedContent.collapse.navbar-collapse
+                        ul.navbar-nav
+                          li.nav-item.active
+                            a.nav-link(href='#')
+                              | Home 
+                              span.sr-only (current)
+                          li.nav-item
+                            a.nav-link(href='#') Link
+                          li.nav-item.dropdown
+                            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
+                            .dropdown-menu(aria-labelledby='navbarDropdown')
+                              a.dropdown-item(href='#') Action
+                              a.dropdown-item(href='#') Another action
+                              .dropdown-divider
+                              a.dropdown-item(href='#') Something else here
+                          li.nav-item
+                            a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
+                        form.form-inline.my-2.my-lg-0.ml-auto
+                          input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+                          span
+                            button.btn.btn-primary(is='xp-bootstrap-button-navButton-navbar', type='button', :bootstrap-button-config='BootstrapButtonConfig', @click='buttonClicked();') Test
+        .global-container.aem-GridColumn.aem-GridColumn--default--12
+          div(is='xp-global-container-container-root')
+            .container.my-1
+              .row
+                .aem-Grid.aem-Grid--12.aem-Grid--default--12
+                  .global-bootstrapCarousel.aem-GridColumn.aem-GridColumn--default--12
+                    #carouselExampleControls.carousel.slide(is='xp-global-bootstrapCarousel-bootstrapcarousel-xp-global-container', data-ride='carousel')
+                      .carousel-inner
+                        .carousel-item.active
+                          img.d-block.w-100(src='https://placehold.it/1200x400/00f/fff?text=Slide%201', alt='Slide 2')
+                        .carousel-item
+                          img.d-block.w-100(src='https://placehold.it/1200x400/0f0/fff?text=Slide%202', alt='Slide 2')
+                        .carousel-item
+                          img.d-block.w-100(src='https://placehold.it/1200x400/0ff/fff?text=Slide%203', alt='Slide 3')
+                      a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.sr-only Previous
+                      a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.sr-only Next
+        .global-sixCellLayout.aem-GridColumn.aem-GridColumn--default--12
+          .container.my-1(is='xp-global-sixCellLayout-sixcelllayout-root')
+            .row.bg-light.row
+              .col-sm-9.p-0.d-flex.flex-wrap
+                // LEFT-SIDE - ROW-1
+                .row.m-0.p-0.w-100
+                  // CARD 1
+                  .col-md-8.p-0.d-flex.p-2.w-100
+                    .aem-Grid.aem-Grid--12.aem-Grid--default--12
+                      .bootstrap-card.h-100.aem-GridColumn.aem-GridColumn--default--12
+                        .card.rounded-0.p-2.border.border-1.h-100(is='xp-bootstrap-card-card-cell1')
+                          img.card-img-top.rounded-0(src='https://placehold.it/750x300', alt='Card')
+                          .card-body.justify-content-between.d-flex.flex-column
+                            h5.card-title Card title
+                            p.card-text
+                              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                            a.mr-auto.btn-sm.btn.btn-primary(href='#') Go somewhere
+                  // CARD 2
+                  .col-md-4.p-0.d-flex.p-2.w-100
+                    .aem-Grid.aem-Grid--12.aem-Grid--default--12
+                      .bootstrap-card.h-100.aem-GridColumn.aem-GridColumn--default--12
+                        .card.rounded-0.p-2.border.border-1.h-100(is='xp-bootstrap-card-card-cell2')
+                          img.card-img-top.rounded-0(src='https://placehold.it/350x300', alt='Card')
+                          .card-body.justify-content-between.d-flex.flex-column
+                            h5.card-title Card title
+                            p.card-text
+                              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                            a.mr-auto.btn-sm.btn.btn-primary(href='#') Go somewhere
+                .row.m-0.p-0.w-100
+                  // CARD 3
+                  .col-md-4.p-0.d-flex.p-2.w-100
+                    .aem-Grid.aem-Grid--12.aem-Grid--default--12
+                      .bootstrap-card.h-100.aem-GridColumn.aem-GridColumn--default--12
+                        .card.rounded-0.p-2.border.border-1.h-100(is='xp-bootstrap-card-card-cell3')
+                          img.card-img-top.rounded-0(src='https://placehold.it/450x300', alt='Card')
+                          .card-body.justify-content-between.d-flex.flex-column
+                            h5.card-title Card title
+                            p.card-text
+                              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                            a.mr-auto.btn-sm.btn.btn-primary(href='#') Go somewhere
+                  // CARD 4
+                  .col-md-4.p-0.d-flex.p-2.w-100
+                    .aem-Grid.aem-Grid--12.aem-Grid--default--12
+                      .bootstrap-card.h-100.aem-GridColumn.aem-GridColumn--default--12
+                        .card.rounded-0.p-2.border.border-1.h-100(is='xp-bootstrap-card-card-cell4')
+                          img.card-img-top.rounded-0(src='https://placehold.it/450x300', alt='Card')
+                          .card-body.justify-content-between.d-flex.flex-column
+                            h5.card-title Card title
+                            p.card-text
+                              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                            a.mr-auto.btn-sm.btn.btn-primary(href='#') Go somewhere
+                  // CARD 5
+                  .col-md-4.p-0.d-flex.p-2.w-100
+                    .aem-Grid.aem-Grid--12.aem-Grid--default--12
+                      .bootstrap-card.h-100.aem-GridColumn.aem-GridColumn--default--12
+                        .card.rounded-0.p-2.border.border-1.h-100(is='xp-bootstrap-card-card-cell5')
+                          img.card-img-top.rounded-0(src='https://placehold.it/450x300', alt='Card')
+                          .card-body.justify-content-between.d-flex.flex-column
+                            h5.card-title Card title
+                            p.card-text
+                              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                            a.mr-auto.btn-sm.btn.btn-primary(href='#') Go somewhere
+              .col-sm-3.p-0
+                .bg-white.m-2.p-2.position-absolute.all-0.d-flex.flex-column.border.border-1
+                  h4 Social Sidebar...
+                  hr
+                  .d-flex.overflow-auto
+                    p
+                      | Topping candy tiramisu souffl &eacute;fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice
+                      | cream chocolate bar donut sweet tart. opping candy tiramisu souffl &eacute;fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice
+                      | cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. opping candy tiramisu souffl &eacute;fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple
+                      | pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar
+                      | donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream
+                      | chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish
+                      | apple pie apple pie. Halva
+        .global-container.aem-GridColumn.aem-GridColumn--default--12
+          div(is='xp-global-container-container_1640665262-root')
+            .container.my-1
+              .row
+                .aem-Grid.aem-Grid--12.aem-Grid--default--12
+        .global-container.aem-GridColumn.aem-GridColumn--default--12
+          div(is='xp-global-container-container_1561992128-root')
+            .container.my-1
+              .row
+                .aem-Grid.aem-Grid--12.aem-Grid--default--12
+        .global-2Column.aem-GridColumn.aem-GridColumn--default--12
+          .container.p-2.bg-success(is='xp-global-2Column-_2column-root')
+            .row
+              .col-6
+                h1.p-2.bg-primary.text-white Contact Information
+              .col-6
+                h1.p-2.bg-primary.text-white
+                  | Social Navigation
+                  span
+        .bootstrap-button.aem-GridColumn.aem-GridColumn--default--12
+        button.btn.btn-primary(is='xp-bootstrap-button-button-root', type='button', :bootstrap-button-config='BootstrapButtonConfig', @click='buttonClicked();') Test
