@@ -1,8 +1,16 @@
 if process.env.isProd
   div(
     data-sly-test="${currentStyle}"
-    is='xp-global-2Column-${resource.name}-${resource.parent.name}' 
+    is='xp-global-2Column-${resource.name}-${resource.parent.name}'
+    class="${currentStyle.outerContainerCSSClasses}" 
   )
+    div(class="${currentStyle.innerContainerCSSClasses}")
+      div.col-6
+        h1.p-2.bg-primary.text-white Contact Information
+        
+      div.col-6
+        h1.p-2.bg-primary.text-white Social Navigation
+          button.btn.btn-dark Sample Button
   
   sly(data-sly-test="${wcmmode.isEdit}")
     div(
@@ -13,5 +21,13 @@ if process.env.isProd
     
 else 
   
-  div(is="xp-global-2Column-sample")
-    h1 The Reebok 2 Column Layout Experience 
+  div.container.bg-dark.p-2(is="xp-global-2Column-sample")
+    div.row
+      div.col-6
+        h1.p-2.bg-primary.text-white Contact Information
+        
+      div.col-6
+        h1.p-2.bg-primary.text-white Social Navigation
+          button.btn.btn-dark Sample Button
+     
+    
