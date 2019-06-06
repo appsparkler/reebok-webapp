@@ -4,7 +4,9 @@ if process.env.isProd
       is='xp-bootstrap-button-${resource.name}-${resource.parent.name}'
       type="button"
       class="${currentStyle.buttonCSSClasses}"
-    ) ${properties.buttonTitle}
+      :bootstrap-button-config="BootstrapButtonConfig"
+      @click="buttonClicked();"
+    ) Test
   
   sly(data-sly-test="${wcmmode.isEdit}")
     div(
@@ -18,4 +20,6 @@ else
   button.btn.btn-primary(
     is="xp-bootstrap-button-sample"
     type="button"
+    :bootstrap-button-config="BootstrapButtonConfig"
+    @click="buttonClicked();"
   ) Primary

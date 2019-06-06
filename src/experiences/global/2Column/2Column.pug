@@ -10,7 +10,8 @@ if process.env.isProd
         
       div.col-6
         h1.p-2.bg-primary.text-white Social Navigation
-          button.btn.btn-dark Sample Button
+          span
+            sly(data-sly-resource="${ '2columnExperienceButton' @ resourceType='/apps/reebok/dist/components/bootstrap/button' }")
   
   sly(data-sly-test="${wcmmode.isEdit}")
     div(
@@ -28,6 +29,6 @@ else
         
       div.col-6
         h1.p-2.bg-primary.text-white Social Navigation
-          button.btn.btn-dark Sample Button
+        include /components/bootstrap/button/button
      
     
