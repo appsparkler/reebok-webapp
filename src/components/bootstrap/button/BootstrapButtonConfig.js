@@ -6,16 +6,16 @@ import './styles.scss';
 // scripts
 export default class {
   config = {
-    props:['bootstrapButtonConfig'],
     data() {
       return {
-        BootstrapButtonConfig: this.bootstrapButtonConfig ? this.bootstrapButtonConfig : {}
+        ReebokButtonConfig: this.componentConfig || {}
       }
     },
+    props:['componentConfig'],
     methods: {
       buttonClicked() {
-        if(this.bootstrapButtonConfig && this.bootstrapButtonConfig.buttonClicked)
-          this.bootstrapButtonConfig.buttonClicked();
+        if(this.componentConfig && this.componentConfig.buttonClicked)
+          this.componentConfig.buttonClicked();
       }
     }
   }

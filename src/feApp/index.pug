@@ -41,4 +41,4 @@ body
                         form.form-inline.my-2.my-lg-0.ml-auto
                           input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
                           span
-                            button(is='xp-bootstrap-button-navButton-navbar', type='button', :bootstrap-button-config='BootstrapButtonConfig', @click='buttonClicked();') Test
+                            button(is='xp-bootstrap-button-navButton-navbar', type='button', :component-config=' ReebokButtonConfig ? ReebokButtonConfig : {} ', @click='buttonClicked();') Test

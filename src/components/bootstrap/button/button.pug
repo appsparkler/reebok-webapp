@@ -4,7 +4,7 @@ if process.env.isProd
       is='xp-bootstrap-button-${resource.name}-${resource.parent.name}'
       type="button"
       class="${currentStyle.buttonCSSClasses}"
-      :bootstrap-button-config="BootstrapButtonConfig || {}"
+      :component-config="ReebokButtonConfig || {}"
       @click="buttonClicked();"
     ) Test
   
@@ -20,6 +20,6 @@ else
   button.btn.btn-primary(
     is="xp-bootstrap-button-sample"
     type="button"
-    v-bind-bootstrap-button-config="BootstrapButtonConfig"
+    :component-config="ReebokButtonConfig"
     @click="buttonClicked();"
   ) Primary

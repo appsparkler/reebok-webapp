@@ -8,12 +8,15 @@ export default class {
   config = {
     data() {
       return {
-        BootstrapButtonConfig: {
+        ReebokButtonConfig: {
           buttonClicked:function() {
             alert('i am the Navbar...')
           }
         }
       }
+    },
+    mounted() {
+      alert('button config')
     }
   }
 
