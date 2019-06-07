@@ -4,7 +4,7 @@ if process.env.isProd
       is='xp-bootstrap-button-${resource.name}-${resource.parent.name}'
       type="button"
       class="${currentStyle.buttonCSSClasses}"
-      :bootstrap-button-config="BootstrapButtonConfig"
+      :bootstrap-button-config="BootstrapButtonConfig || {}"
       @click="buttonClicked();"
     ) Test
   
