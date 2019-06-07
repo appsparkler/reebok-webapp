@@ -1,6 +1,8 @@
 import $ from 'jquery'
 import Vue from 'vue'
 import '@fortawesome/fontawesome-free/css/all.css'
+import 'bootstrap'
+import 'bootstrap\\dist\\css\\bootstrap.css'
 
 Vue.config.comments = true;
 Vue.config.ignoredElements = ['cq', 'sly'];

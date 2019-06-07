@@ -7,6 +7,11 @@ import './styles.scss';
 export default class {
   config = {
     props:['bootstrapButtonConfig'],
+    data() {
+      return {
+        BootstrapButtonConfig: this.bootstrapButtonConfig ? this.bootstrapButtonConfig : {}
+      }
+    },
     methods: {
       buttonClicked() {
         if(this.bootstrapButtonConfig && this.bootstrapButtonConfig.buttonClicked)

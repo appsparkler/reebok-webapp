@@ -211,7 +211,7 @@ function get_pluginToCopyAppFolders() {
 function get_pages() {
     try {
         const pages = get_generatedPages(isDev);
-        if(isDev) pages['FEAppIndex'] = {
+        pages['FEAppIndex'] = {
             // entry for the page
             entry: path.resolve('src/feApp/index.js'),
             // the source template
@@ -226,7 +226,14 @@ function get_pages() {
             chunks: [
               'chunk-vendors',
               'chunk-common',
-              'FEAppIndex'
+              // experiences
+              "experiences/global/container/publishLibs",
+              // components
+              "components/global/navbar/publishLibs",
+              "components/bootstrap/button/publishLibs",
+              // templates
+              "templates/global/BasePage/publishLibs"
+
             ]
         };
         return pages;

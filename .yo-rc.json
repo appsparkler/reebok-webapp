@@ -81,7 +81,7 @@
           "chunks": [
             "chunk-vendors",
             "chunk-common",
-            "components/global/card/publishLibs"
+            "components/bootstrap/card/publishLibs"
           ]
         },
         "button": {
@@ -91,7 +91,7 @@
           "chunks": [
             "chunk-vendors",
             "chunk-common",
-            "components/global/button/publishLibs"
+            "components/bootstrap/button/publishLibs"
           ]
         }
       }
