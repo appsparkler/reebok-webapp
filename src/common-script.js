@@ -26,7 +26,7 @@ export const initialize_VueComponents = () => {
 function VueApp() {
   $('*', this).each(remove_allAtributesFromHTMLOtherThanIs)
   console.log(this.outerHTML)
-  var VueApp = new Vue({
+  new Vue({
       el: this,
       template: this.outerHTML
   });
