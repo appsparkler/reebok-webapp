@@ -25,13 +25,15 @@ export const initialize_VueComponents = () => {
 }
 // private functions
 function VueApp() {
+  $('*', this).each(remove_allAtributesFromHTMLOtherThanIs)
   var VueApp = new Vue({
       el: this,
-      template: this.outerHTML,
-      data() {
-        return {
-          ReebokButtonConfig: {}
-        }
-      }
+      template: this.outerHTML
   });
+}
+
+
+function remove_allAtributesFromHTMLOtherThanIs() {
+  console.log(this)
+  debugger;
 }
