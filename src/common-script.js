@@ -34,6 +34,10 @@ function VueApp() {
 
 
 function remove_allAtributesFromHTMLOtherThanIs() {
-  console.log(this)
-  debugger;
+  console.log(this.attributes.is);
+  Object.keys(this.attributes).forEach(delete_NonIsAttribute)
+}
+
+function delete_NonIsAttribute() {
+
 }
