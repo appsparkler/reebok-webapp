@@ -7,6 +7,11 @@ import './styles.scss';
 export default class {
   config = {
     props:['componentApi'],
+    data: function() {
+      return {
+        ReebokButtonConfig: {}
+      }
+    },
     methods: {
       buttonClicked() {
         if(this.componentApi && this.componentApi.buttonClicked)
