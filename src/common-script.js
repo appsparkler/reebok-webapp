@@ -21,12 +21,6 @@ export const initialize_VueComponents = () => {
 }
 // private functions
 function VueApp() {
-  Vue.use({
-    install(Vue, options) {
-      Vue.prototype.dynamicComponents = [];
-    }
-  });
-  //
   $('*', this).each(remove_allAtributesFromHTMLOtherThanIs);
   Vue.use(TestPlugin, {vueComponents})
   new Vue({
