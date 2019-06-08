@@ -9,13 +9,13 @@ export default class {
     props:['componentApi'],
     methods: {
       buttonClicked() {
-        if(this.componentApi && this.componentApi)
+        if(this.componentApi && this.componentApi.buttonClicked)
           this.componentApi.buttonClicked();
       }
     },
     beforeCreate() {
       console.log(this)
-      debugger; 
+      debugger;
     }
   }
 
