@@ -6,16 +6,11 @@ import './styles.scss';
 // scripts
 export default class {
   config = {
-    data() {
-      return {
-        ReebokButtonConfig: this.componentConfig || {}
-      }
-    },
-    props:['componentConfig'],
+    props:['componentApi'],
     methods: {
       buttonClicked() {
-        if(this.componentConfig && this.componentConfig.buttonClicked)
-          this.componentConfig.buttonClicked();
+        if(this.componentApi && this.componentApi)
+          this.componentApi.buttonClicked();
       }
     }
   }

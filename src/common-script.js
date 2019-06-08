@@ -27,6 +27,11 @@ export const initialize_VueComponents = () => {
 function VueApp() {
   var VueApp = new Vue({
       el: this,
-      template: this.outerHTML
+      template: this.outerHTML,
+      data() {
+        return {
+          ReebokButtonConfig: {}
+        }
+      }
   });
 }
