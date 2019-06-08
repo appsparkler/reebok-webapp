@@ -41,4 +41,14 @@ body
                         form.form-inline.my-2.my-lg-0.ml-auto
                           input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
                           span
-                            button(is='xp-bootstrap-button-navButton-navbar', type='button', :component-api="ReebokButtonConfig", @click='buttonClicked();') Test
+                            button(is='xp-bootstrap-button-navButton-navbar', type='button', :component-api='ReebokButtonConfig', @click='buttonClicked();') Test
+        .global-2Column.aem-GridColumn.aem-GridColumn--default--12
+          .container.bg-primary.p-2(is='xp-global-2Column-_2column-root')
+            .row
+              .col-6
+                h1.p-2.bg-primary.text-white Contact Information
+              .col-6
+                h1.p-2.bg-primary.text-white
+                  | Social Navigation
+                  span
+                    button(is='xp-bootstrap-button-2columnExperienceButton-_2column', type='button', :component-api='ReebokButtonConfig', @click='buttonClicked();') Test

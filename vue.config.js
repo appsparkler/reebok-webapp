@@ -44,7 +44,7 @@ if(isDev) vueConfig.configureWebpack.plugins.push(get_PluginToHotReloadIncludedP
 if(isProd) vueConfig.configureWebpack.plugins.push(...get_HTMLWebpackPluginsToCompilePugs());
 if(isProd) vueConfig.configureWebpack.plugins.push(get_pluginToCopyAppFolders());
 if(isProd) vueConfig.configureWebpack.plugins.push(get_clientLibraryFolderWebpackPlugin());
-if(isProd) vueConfig.configureWebpack.plugins.push(copy_toAEMApps());
+if(isProd) vueConfig.configureWebpack.plugins.push(setup_postBuildConfiguration());
 
 // UNUTILIZED : if(isProd) vueConfig.configureWebpack.plugins.push(get_pluginToGenerateManifest());
 
@@ -228,6 +228,7 @@ function get_pages() {
               'chunk-common',
               // experiences
               "experiences/global/container/publishLibs",
+              "experiences/global/2Column/publishLibs",
               // components
               "components/global/navbar/publishLibs",
               "components/bootstrap/button/publishLibs",
@@ -316,14 +317,14 @@ function get_clientLibraryFolderWebpackPlugin() {
   return new (require('./webpackAssets/customPlugins/ClientLibraryFolderWebpackPlugin.js'))();
 }
 
-function copy_toAEMApps() {
+function setup_postBuildConfiguration() {
   try {
       const EventHooksPlugin = require('event-hooks-webpack-plugin');
       return new EventHooksPlugin({
         done() {
           try {
-  //            require('./webpackAssets/utils/setup_AEMApp.js')();
-    //          require('./webpackAssets/utils/executeMavenBuild.js')();
+             // require('./webpackAssets/utils/setup_AEMApp.js')();
+             // require('./webpackAssets/utils/executeMavenBuild.js')();
           } catch (e) {
               console.error(e);
           }

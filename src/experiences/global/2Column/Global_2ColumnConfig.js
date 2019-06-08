@@ -8,7 +8,7 @@ export default class {
   config = {
     data() {
       return {
-        BootstrapButtonConfig: {
+        ReebokButtonConfig: {
           buttonClicked:function() {
             alert('i am the 2 column experience...')
           }
