@@ -8,7 +8,8 @@ mixin card(is)
         h5.card-title Card title
         p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
           if process.env.isProd
-            sly(data-sly-resource="${ 'cardButton' @ resourceType='/apps/reebok/dist/components/bootstrap/button' }")
+            span
+              sly(data-sly-resource="${ 'cardButton' @ resourceType='/apps/reebok/dist/components/bootstrap/button' }")
           
           else 
           
