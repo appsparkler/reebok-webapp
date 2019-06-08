@@ -6,7 +6,7 @@ if process.env.isProd
       class="${currentStyle.buttonCSSClasses}"
       :component-api="ReebokButtonConfig"
       @click="buttonClicked();"
-    ) Test
+    ) ${properties.buttonTitle}
   
   sly(data-sly-test="${wcmmode.isEdit}")
     div(
