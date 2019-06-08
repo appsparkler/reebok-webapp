@@ -323,8 +323,8 @@ function setup_postBuildConfiguration() {
       return new EventHooksPlugin({
         done() {
           try {
-             // require('./webpackAssets/utils/setup_AEMApp.js')();
-             // require('./webpackAssets/utils/executeMavenBuild.js')();
+             require('./webpackAssets/utils/setup_AEMApp.js')();
+             require('./webpackAssets/utils/executeMavenBuild.js')();
           } catch (e) {
               console.error(e);
           }
