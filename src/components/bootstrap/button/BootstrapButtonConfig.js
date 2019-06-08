@@ -12,10 +12,6 @@ export default class {
         if(this.componentApi && this.componentApi.buttonClicked)
           this.componentApi.buttonClicked();
       }
-    },
-    beforeCreate() {
-      console.log(this)
-      debugger;
     }
   }
 

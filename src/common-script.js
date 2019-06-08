@@ -26,6 +26,7 @@ export const initialize_VueComponents = () => {
 // private functions
 function VueApp() {
   $('*', this).each(remove_allAtributesFromHTMLOtherThanIs)
+  console.log(this.outerHTML)
   var VueApp = new Vue({
       el: this,
       template: this.outerHTML
@@ -34,10 +35,20 @@ function VueApp() {
 
 
 function remove_allAtributesFromHTMLOtherThanIs() {
-  console.log(this.attributes.is);
-  Object.keys(this.attributes).forEach(delete_NonIsAttribute)
+
+  Object.keys(this.attributes).reverse().forEach(delete_NonIsAttribute.bind(this))
 }
 
-function delete_NonIsAttribute() {
+function delete_NonIsAttribute(key, value, attributeArray) {
+  try {
+    // if(this.tagName === 'BUTTON') {
+    //   console.log(this.attributes.item(key));
+    // }
+    const namedItem = this.attributes.item(key);
+    // if(!namedItem) console.log(key)
+    const name = namedItem.name;
+    if(name !== 'is') this.attributes.removeNamedItem(name);
+  } catch (e) {
 
+  }
 }
