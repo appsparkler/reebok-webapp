@@ -14,9 +14,6 @@ export default class {
           }
         }
       }
-    },
-    mounted() {
-      alert('button config')
     }
   }
 
