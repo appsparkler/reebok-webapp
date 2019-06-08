@@ -29,7 +29,6 @@ function VueApp() {
   //
   $('*', this).each(remove_allAtributesFromHTMLOtherThanIs);
   Vue.use(TestPlugin, {vueComponents})
-  alert(Vue.dynamicComponents)
   new Vue({
       el: this,
       template: this.outerHTML
