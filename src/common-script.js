@@ -23,9 +23,9 @@ export const initialize_VueComponents = () => {
 }
 // private functions
 function VueApp() {
-  $('*', this).each(remove_allAtributesFromHTMLOtherThanIs);
   Vue.use(Plugin_AEMVue, {vueComponentsV2})
   Vue.use(TestPlugin, {vueComponents});
+  $('*', this).each(remove_allAtributesFromHTMLOtherThanIs);
   new Vue({
       el: this,
       template: this.outerHTML

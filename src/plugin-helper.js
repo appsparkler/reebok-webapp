@@ -2,20 +2,20 @@
 import $ from 'jquery'
 export default class VueComponentNameAndTemplateExtractor {
   constructor(el) {
-    const attributesToRemove = ["v-bind:component-api"];
+    const attributesToRemove = [":component-api"];
     this.clonedEl = el.cloneNode(true);
-    console.log('el: ', el.attributes.getNamedItem('component-api'));
-    // remove un-required attributes from element
-    this.clonedEl.removeAttribute(':component-api');
     // remove un-required attributes from 2nd-gen + components
     const listOfComponents = [];
     const nestedComponents = this.clonedEl.querySelectorAll('[is] [is] [is]');
-    console.log(this.clonedEl.outerHTML)
     listOfComponents.push(this.clonedEl);
     // hydrate list-of-components
     nestedComponents.forEach(elem => listOfComponents.push(elem));
     listOfComponents.forEach(remove_blockingAttributes.bind(null, attributesToRemove));
     listOfComponents.forEach(elem => console.log(elem.outerHTML));
+    //  
+    this.template = this.clonedEl.outerHTML;
+    this.name = this.clonedEl.attributes.is.value.toString();
+    this.name = this.clonedEl;
 
     function remove_blockingAttributes(attrs, elem) {
       attrs.forEach(attr => elem.removeAttribute(attr));
@@ -36,7 +36,6 @@ export default class VueComponentNameAndTemplateExtractor {
     // const clonedEl = $clone.get(0);
     // $clone.removeAttr(':component-api');
     // this.clonedEl.removeAttribute(':component-api');
-    // this.name = this.clonedEl.attributes.is.value.toString();
     // this.clonedEl.removeAttribute('is');
     // this.template = this.clonedEl.outerHTML.replace(/is=".*?"/, '');
     // console.log(this.template);
