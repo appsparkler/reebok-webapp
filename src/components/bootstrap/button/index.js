@@ -2,7 +2,7 @@ import $ from 'jquery';
 import Vue from 'vue';
 //
 import BootstrapButtonComponentConfig from './BootstrapButtonConfig'
-global.vueComponents = global.vueComponents || [];
+global.vueComponentConfigs = global.vueComponentConfigs || [];
 setup_buttonComponents();
 
 // private functions

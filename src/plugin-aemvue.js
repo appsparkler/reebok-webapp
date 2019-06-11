@@ -2,7 +2,7 @@ import PluginHelper from 'plugin-helper'
 
 export default {
   install(Vue, options) {
-    const configKey = "vueComponents"
+    const configKey = "vueComponentConfigs"
     options[configKey].forEach(setup_pHs.bind(null, Vue))
   }
 }

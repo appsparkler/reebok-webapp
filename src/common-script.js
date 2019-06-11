@@ -12,7 +12,7 @@ Vue.config.warnHandler = function(msg, vm, trace) {
 };
 Vue.config.productionTip = false;
 Vue.config.devTools = true;
-global.vueComponents = global.vueComponents || [];
+global.vueComponentConfigs = global.vueComponentConfigs || [];
 
 export const initialize_VueApps = () => {
   $('[id^=app]').each(VueApp);
@@ -22,7 +22,7 @@ export const initialize_VueComponents = () => {}
 
 // private functions
 function VueApp() {
-  Vue.use(Plugin_AEMVue, {vueComponents})
+  Vue.use(Plugin_AEMVue, {vueComponentConfigs, })
   $('*', this).each(remove_allAtributesFromHTMLOtherThanIs);
   // Vue.use(TestPlugin, {vueComponents});
   new Vue({
