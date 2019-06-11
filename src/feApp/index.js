@@ -1,7 +1,10 @@
+import 'bootstrap'
 import 'bootstrap\\dist\\css\\bootstrap.css'
+
 
 import 'components/bootstrap/card'
 import 'components/bootstrap/button'
+
 import 'components/global/navbar'
 import 'components/global/bootstrapCarousel'
 

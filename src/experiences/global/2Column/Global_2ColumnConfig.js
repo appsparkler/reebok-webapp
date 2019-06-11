@@ -6,12 +6,12 @@ import './styles.scss';
 // scripts
 export default class {
   config = {
-    data() {
-      return {
-        ReebokButtonConfig: {
-          buttonClicked:function() {
-            alert('i am the 2 column experience...')
-          }
+      data() {
+        return {
+          ReebokButtonConfig: {
+            buttonClicked() {
+              alert('This is 2 Column Experience.')
+            }
         }
       }
     }
