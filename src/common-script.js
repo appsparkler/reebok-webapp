@@ -18,8 +18,8 @@ export const initialize_VueApps = () => {
   $('[id^=app]').each(VueApp);
 }
 
-export const initialize_VueComponents = () => {
-}
+export const initialize_VueComponents = () => {}
+
 // private functions
 function VueApp() {
   Vue.use(Plugin_AEMVue, {vueComponents})
