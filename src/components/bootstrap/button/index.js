@@ -12,9 +12,10 @@ function setup_buttonComponents() {
 }
 
 function generate_buttonComponent() {
-    vueComponents.push(new BootstrapButtonComponentConfig(this));
+  console.log(this.outerHTML);
     vueComponentsV2.push({
       config: new BootstrapButtonComponentConfig(this),
       el: this
     });
+    // vueComponents.push(new BootstrapButtonComponentConfig(this));
 }

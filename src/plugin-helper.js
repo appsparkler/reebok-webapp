@@ -1,17 +1,27 @@
 // import {remove_allAtributesFromHTMLOtherThanIs} from 'common-script'
+import $ from 'jquery'
 export default class VueComponentNameAndTemplateExtractor {
   constructor(el) {
-    const attributesToRemove = [":component-api"];
+    const attributesToRemove = ["v-bind:component-api"];
     this.clonedEl = el.cloneNode(true);
+    console.log('el: ', el.attributes.getNamedItem('component-api'));
     // remove un-required attributes from element
     this.clonedEl.removeAttribute(':component-api');
     // remove un-required attributes from 2nd-gen + components
     const listOfComponents = [];
-    const nestedComponents = this.clonedEl.querySelectorAll('[is] [is]');
+    const nestedComponents = this.clonedEl.querySelectorAll('[is] [is] [is]');
+    console.log(this.clonedEl.outerHTML)
     listOfComponents.push(this.clonedEl);
-    // listOfComponents.concat(nestedComponents)
-    console.log(listOfComponents)
-    // console.log(nestedComponents);
+    // hydrate list-of-components
+    nestedComponents.forEach(elem => listOfComponents.push(elem));
+    listOfComponents.forEach(remove_blockingAttributes.bind(null, attributesToRemove));
+    listOfComponents.forEach(elem => console.log(elem.outerHTML));
+
+
+
+    function remove_blockingAttributes(attrs, elem) {
+      attrs.forEach(attr => elem.removeAttribute(attr));
+    }
     // if(Array.isArray(nestedComponents))
     //   nestedComponents.forEach(
     //     el => remove_blockingAttributes(null, attributesToRemove, el)
