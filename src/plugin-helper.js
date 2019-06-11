@@ -1,6 +1,5 @@
 // import {remove_allAtributesFromHTMLOtherThanIs} from 'common-script'
-import $ from 'jquery'
-export default class VueComponentNameAndTemplateExtractor {
+export default class {
   constructor(el) {
     const attributesToRemove = [":component-api"];
     const clonedEl = el.cloneNode(true);

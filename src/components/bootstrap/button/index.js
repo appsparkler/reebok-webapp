@@ -11,7 +11,7 @@ function setup_buttonComponents() {
 }
 
 function generate_buttonComponent() {
-  vueComponents.push({
+  global.vueComponentConfigs.push({
       config: new BootstrapButtonComponentConfig(this),
       el: this
     });
