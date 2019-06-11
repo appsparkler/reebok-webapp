@@ -2,7 +2,7 @@ import $ from 'jquery';
 import Vue from 'vue';
 //
 import Global_2ColumnComponentConfig from './Global_2ColumnConfig'
-global.vueComponents = global.vueComponents || [];
+global.vueComponentConfigs = global.vueComponentConfigs || [];
 setup_2ColumnComponents();
 
 // private functions
@@ -11,5 +11,8 @@ function setup_2ColumnComponents() {
 }
 
 function generate_2ColumnComponent() {
-    vueComponents.push(new Global_2ColumnComponentConfig(this));
+    global.vueComponentConfigs.push({
+      config: new Global_2ColumnComponentConfig(this),
+      el: this
+    });
 }
