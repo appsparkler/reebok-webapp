@@ -2,6 +2,7 @@ import $ from 'jquery';
 import Vue from 'vue';
 //
 import BootstrapButtonComponentConfig from './BootstrapButtonConfig'
+global.vueComponentsV2 = [];
 global.vueComponents = global.vueComponents || [];
 setup_buttonComponents();
 
@@ -12,4 +13,8 @@ function setup_buttonComponents() {
 
 function generate_buttonComponent() {
     vueComponents.push(new BootstrapButtonComponentConfig(this));
+    vueComponentsV2.push({
+      config: new BootstrapButtonComponentConfig(this),
+      el: this
+    });
 }
