@@ -13,8 +13,6 @@ export default class VueComponentNameAndTemplateExtractor {
     listOfComponents.forEach(
       remove_blockingAttributes.bind(null, attributesToRemove)
     );
-    listOfComponents.forEach(elem => console.log(elem.outerHTML));
-    //
     this.template = clonedEl.outerHTML.replace(/is=".*?"/, '');
     this.name = clonedEl.attributes.is.value.toString();
   }
