@@ -6,10 +6,8 @@ export default {
   }
 }
 function setup_pHs(Vue, obj) {
-  const pH = new PluginHelper(obj.el);
+  const pluginHelper = new PluginHelper(obj.el);
   obj.config = obj.config || {};
-  obj.config.template = pH.template;
-  console.log(pH.template);
-  // Vue.component(pH.name, obj);
-  // Vue.component(pH.name, )
+  obj.config.template = pluginHelper.template;
+  Vue.component(pluginHelper.name, obj.config);
 }
