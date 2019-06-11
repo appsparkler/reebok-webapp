@@ -13,7 +13,6 @@ Vue.config.warnHandler = function(msg, vm, trace) {
 Vue.config.productionTip = false;
 Vue.config.devTools = true;
 global.vueComponents = global.vueComponents || [];
-// global.vueComponentsV2 = global.vueComponentsV2 || [];
 
 export const initialize_VueApps = () => {
   $('[id^=app]').each(VueApp);
