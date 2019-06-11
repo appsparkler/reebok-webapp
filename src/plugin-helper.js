@@ -17,8 +17,6 @@ export default class VueComponentNameAndTemplateExtractor {
     listOfComponents.forEach(remove_blockingAttributes.bind(null, attributesToRemove));
     listOfComponents.forEach(elem => console.log(elem.outerHTML));
 
-
-
     function remove_blockingAttributes(attrs, elem) {
       attrs.forEach(attr => elem.removeAttribute(attr));
     }

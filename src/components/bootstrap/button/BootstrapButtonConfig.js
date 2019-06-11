@@ -16,8 +16,8 @@ export default class {
   }
 
   constructor(el) {
-    const extractor = new Extractor(el);
-    this.config.name = extractor.name;
-    this.config.template = extractor.template;
+    // const extractor = new Extractor(el);
+    // this.config.name = extractor.name;
+    // this.config.template = extractor.template;
   }
 }
