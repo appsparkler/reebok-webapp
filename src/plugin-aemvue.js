@@ -6,6 +6,7 @@ export default {
     options[configKey].forEach(setup_pHs.bind(null, Vue))
   }
 }
+
 function setup_pHs(Vue, obj) {
   const pluginHelper = new PluginHelper(obj.el);
   obj.config = obj.config || {};

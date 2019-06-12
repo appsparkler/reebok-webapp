@@ -2,7 +2,7 @@ import $ from 'jquery';
 import Vue from 'vue';
 //
 import BootstrapCardComponentConfig from './BootstrapCardConfig'
-global.vueComponents = global.vueComponents || [];
+global.vueComponentsConfig = global.vueComponentsConfig || [];
 setup_cardComponents();
 
 // private functions
@@ -11,5 +11,8 @@ function setup_cardComponents() {
 }
 
 function generate_cardComponent() {
-    vueComponents.push(new BootstrapCardComponentConfig(this));
+    global.vueComponentsConfig.push({
+      config: new BootstrapCardComponentConfig(this),
+      el: this
+    });
 }
