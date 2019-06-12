@@ -2,7 +2,7 @@ import $ from 'jquery';
 import Vue from 'vue';
 //
 import GlobalNavbarComponentConfig from './GlobalNavbarConfig'
-global.vueComponents = global.vueComponents || [];
+global.vueComponentConfigs = global.vueComponentConfigs || [];
 setup_navbarComponents();
 
 // private functions
@@ -11,5 +11,5 @@ function setup_navbarComponents() {
 }
 
 function generate_navbarComponent() {
-    vueComponents.push(new GlobalNavbarComponentConfig(this));
+    global.vueComponentConfigs.push(new GlobalNavbarComponentConfig(this));
 }
