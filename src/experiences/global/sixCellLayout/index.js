@@ -2,7 +2,7 @@ import $ from 'jquery';
 import Vue from 'vue';
 //
 import GlobalSixCellLayoutComponentConfig from './GlobalSixCellLayoutConfig'
-global.vueComponents = global.vueComponents || [];
+global.vueComponentConfigs = global.vueComponentConfigs || [];
 setup_sixCellLayoutComponents();
 
 // private functions
@@ -11,5 +11,8 @@ function setup_sixCellLayoutComponents() {
 }
 
 function generate_sixCellLayoutComponent() {
-    vueComponents.push(new GlobalSixCellLayoutComponentConfig(this));
+    vueComponentConfigs.push({
+      config:new GlobalSixCellLayoutComponentConfig(),
+      el: this
+    });
 }
