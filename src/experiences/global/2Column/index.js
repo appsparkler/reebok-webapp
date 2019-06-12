@@ -12,7 +12,7 @@ function setup_2ColumnComponents() {
 
 function generate_2ColumnComponent() {
     global.vueComponentConfigs.push({
-      config: new Global_2ColumnComponentConfig(this),
+      config: new Global_2ColumnComponentConfig(),
       el: this
     });
 }
