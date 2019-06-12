@@ -1,5 +1,3 @@
-import Extractor from 'classes/VueComponentNameAndTemplateStringExtractor';
-
 // styles
 import './styles.scss';
 
@@ -15,11 +13,5 @@ export default class {
         }
       }
     }
-  }
-
-  constructor(el) {
-    const extractor = new Extractor(el);
-    this.config.name = extractor.name;
-    this.config.template = extractor.template;
   }
 }
