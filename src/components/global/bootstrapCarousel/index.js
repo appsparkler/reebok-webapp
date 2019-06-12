@@ -11,7 +11,7 @@ function setup_bootstrapCarouselComponents() {
 }
 
 function generate_bootstrapCarouselComponent() {
-    vueComponents.push({
+    global.vueComponentConfigs.push({
       config: new GlobalBootstrapCarouselComponentConfig(),
       el: this
     });
