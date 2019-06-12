@@ -2,7 +2,7 @@ import $ from 'jquery';
 import Vue from 'vue';
 //
 import GlobalBootstrapCarouselComponentConfig from './GlobalBootstrapCarouselConfig'
-global.vueComponents = global.vueComponents || [];
+global.vueComponentConfigs = global.vueComponentConfigs || [];
 setup_bootstrapCarouselComponents();
 
 // private functions
@@ -11,5 +11,8 @@ function setup_bootstrapCarouselComponents() {
 }
 
 function generate_bootstrapCarouselComponent() {
-    vueComponents.push(new GlobalBootstrapCarouselComponentConfig(this));
+    vueComponents.push({
+      config: new GlobalBootstrapCarouselComponentConfig(),
+      el: this
+    });
 }
