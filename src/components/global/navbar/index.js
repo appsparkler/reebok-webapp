@@ -12,7 +12,7 @@ function setup_navbarComponents() {
 
 function generate_navbarComponent() {
     global.vueComponentConfigs.push({
-      config: new GlobalNavbarComponentConfig(),
+      config: new GlobalNavbarComponentConfig(this),
       el: this
     });
 }
