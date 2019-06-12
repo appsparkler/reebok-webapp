@@ -226,14 +226,15 @@ function get_pages() {
             chunks: [
               'chunk-vendors',
               'chunk-common',
+              'FEAppIndex'
               // experiences
-              "experiences/global/container/publishLibs",
-              "experiences/global/2Column/publishLibs",
+              // "experiences/global/container/publishLibs",
+              // "experiences/global/2Column/publishLibs",
               // components
-              "components/global/navbar/publishLibs",
-              "components/bootstrap/button/publishLibs",
+              // "components/global/navbar/publishLibs",
+              // "components/bootstrap/button/publishLibs",
               // templates
-              "templates/global/BasePage/publishLibs"
+              // "templates/global/BasePage/publishLibs"
 
             ]
         };

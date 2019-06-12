@@ -10,5 +10,4 @@ import 'experiences/global/2Column'
 import 'components/bootstrap/card'
 // import 'components/global/bootstrapCarousel'
 
-
 import 'templates/global/BasePage/index.js'
