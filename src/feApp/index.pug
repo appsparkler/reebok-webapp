@@ -41,8 +41,10 @@ body
                         form.form-inline.my-2.my-lg-0.ml-auto
                           input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
                           span
-                            pre.bg-primary.text-white ReebokButtonConfig : {{ ReebokButtonConfig }}
                             button.my-style(
-                              is="xp-bootstrap-button-1" type='button', 
-                              :component-api='ReebokButtonConfig' @click='buttonClicked();') SEARCH
+                              is="xp-bootstrap-button-1" 
+                              type='button', 
+                              :component-api='ReebokButtonConfig' 
+                              @click='buttonClicked();'
+                            ) SEARCH
         

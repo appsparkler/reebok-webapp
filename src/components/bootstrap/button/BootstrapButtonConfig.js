@@ -4,7 +4,7 @@ import './styles.scss';
 // scripts
 export default class {
   props = ['componentApi']
-  mounted() {
+  mounted = function() {
     alert('button is mounted...')
   }
   methods = {
