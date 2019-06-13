@@ -6,7 +6,7 @@
 import 'experiences/global/sixCellLayout'
 
 import 'components/global/navbar'
-// import 'components/bootstrap/button'
+import 'components/bootstrap/button'
 // import 'components/bootstrap/card'
 // import 'components/global/bootstrapCarousel'
 

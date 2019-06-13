@@ -12,7 +12,7 @@ function setup_buttonComponents() {
 
 function generate_buttonComponent() {
   global.vueComponentConfigs.push({
-      config: new BootstrapButtonComponentConfig(this),
+      config: new BootstrapButtonComponentConfig(),
       el: this
     });
 }

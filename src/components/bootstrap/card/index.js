@@ -12,7 +12,7 @@ function setup_cardComponents() {
 
 function generate_cardComponent() {
     global.vueComponentConfigs.push({
-      config: new BootstrapCardComponentConfig(this),
+      config: new BootstrapCardComponentConfig(),
       el: this
     });
 }

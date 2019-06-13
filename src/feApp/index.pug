@@ -17,7 +17,7 @@ body
               div
                 div.aem-Grid.aem-Grid--12.aem-Grid--default--12
                   div.global-navbar.aem-GridColumn.aem-GridColumn--default--12
-                    nav.navbar.navbar-expand-lg.w-100.navbar.navbar-dark.bg-primary.navbar-expand-lg()
+                    nav.navbar.navbar-expand-lg.w-100.navbar.navbar-dark.bg-primary.navbar-expand-lg(is="xp-global-navbar-1")
                       a.navbar-brand(href='#') Navbar
                       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
                         span.navbar-toggler-icon
@@ -41,8 +41,8 @@ body
                         form.form-inline.my-2.my-lg-0.ml-auto
                           input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
                           span
-                            button.my-style(is="xp-global-navbar-1" type='button', :component-api='ReebokButtonConfig', @click='buttonClicked();') SEARCH
-                              span(is="hello-span-1" :component-api="'hello world'")
-                                span(is="hello-span-2" :component-api="'hello world 2'")
-                                  span(is="hello-span-3" :component-api="'hello world 3'")
+                            pre.bg-primary.text-white ReebokButtonConfig : {{ ReebokButtonConfig }}
+                            button.my-style(
+                              is="xp-bootstrap-button-1" type='button', 
+                              :component-api='ReebokButtonConfig' @click='buttonClicked();') SEARCH
         
