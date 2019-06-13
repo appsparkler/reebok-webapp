@@ -3,7 +3,7 @@ import './styles.scss';
 
 // scripts
 export default class {
-  data = () {
+  data = function() {
     return {
       ReebokButtonConfig:{
         buttonClicked() {
