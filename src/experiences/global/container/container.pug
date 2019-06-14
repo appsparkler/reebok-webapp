@@ -2,10 +2,10 @@ if process.env.isProd
   div(
     data-sly-test="${currentStyle}"
     is='xp-global-container-${resource.name}-${resource.parent.name}' 
+    class="${currentStyle.outerContainerCSSClass}"
   )
-    div(class="${currentStyle.outerContainerCSSClass}")
-      div(class="${currentStyle.innerContainerCSSClass}")
-        sly(data-sly-resource="${ 'xp-global-container' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+    div(class="${currentStyle.innerContainerCSSClass}")
+      sly(data-sly-resource="${ 'xp-global-container' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
   
   sly(data-sly-test="${wcmmode.isEdit}")
     div(
