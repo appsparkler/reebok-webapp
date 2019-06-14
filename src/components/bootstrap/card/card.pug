@@ -1,10 +1,12 @@
 mixin card(is)
-  div(is=is class="${currentStyle.cardOuterContainerCSSClasses}")
+  div(is=is class!=attributes.cardClass)
       //-card.rounded-0.p-2.border.border-1 
-      img.card-img-top.rounded-0(
+      img(
+        class!=attributes.cardImageClass
         src!=attributes.imgSrc
         alt="Card"
       )
+      //- .card-img-top.rounded-0
       div.card-body.justify-content-between.d-flex.flex-column
         h5.card-title Card title
         p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
@@ -22,6 +24,8 @@ if process.env.isProd
     data-sly-test="${currentStyle}" 
   )
     +card("xp-bootstrap-card-${resource.name}-${resource.parent.name}")(
+      cardClass="${currentStyle.cardClass}"
+      cardImageClass="${currentStyle.cardImageClass}"
       linkClass="btn btn-primary"
       imgSrc="${properties.imgSrc}"
     )

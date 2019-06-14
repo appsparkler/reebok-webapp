@@ -13,16 +13,16 @@
     <items jcr:primaryType="nt:unstructured">
       <container jcr:primaryType="nt:unstructured" maximized="true" sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
-          <cardOuterContainerCSSStyles
+          <cardClass
               jcr:primaryType="nt:unstructured"
               sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
-              fieldLabel="Card Outer Container CSS Classes"
-              name="./cardOuterContainerCSSClasses"/>
-          <cardOuterContainerCSSStyles
+              fieldLabel="Card CSS Classes"
+              name="./cardClass"/>
+          <cardImageClass
               jcr:primaryType="nt:unstructured"
               sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
-              fieldLabel="Card Outer Container CSS Classes"
-              name="./cardOuterContainerCSSClasses"/>
+              fieldLabel="Card Image CSS Classes"
+              name="./cardImageClass"/>
         </items>
       </container>
     </items>
