@@ -21,6 +21,14 @@
                       fieldDescription="The link to image"
                       fieldLabel="Image Source"
                       name="./imgSrc"/>
+
+                      <testIng
+                          jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                          emptyText="This is a test..."
+                          fieldDescription="This is  a test"
+                          fieldLabel="Testing..."
+                          name="./test"/>
                 </items>
             </properties>
         </items>
