@@ -10,10 +10,10 @@ if process.env.isProd
         div.row.m-0.p-0.w-100
           // CARD 1
           div.col-md-8.p-0.d-flex.p-2.w-100
-            div.d-flex.h-100(data-sly-resource="${ 'cell1' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+            sly(data-sly-resource="${ 'cell1' @ resourceType='/apps/reebok/dist/experiences/global/container' }")
           // CARD 2
           div.col-md-4.p-0.d-flex.p-2.w-100
-            div.d-flex.h-100(data-sly-resource="${ 'cell2' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+            sly(data-sly-resource="${ 'cell2' @ resourceType='/apps/reebok/dist/experiences/global/container' }")
         div.row.m-0.p-0.w-100
           // CARD 3
           div.col-md-4.p-0.d-flex.p-2.w-100
