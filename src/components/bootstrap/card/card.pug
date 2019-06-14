@@ -1,5 +1,6 @@
 mixin card(is)
-  div.card.rounded-0.p-2.border.border-1(is=is)
+  div(is=is class="${currentStyle.cardOuterContainerCSSClasses}")
+      //-card.rounded-0.p-2.border.border-1 
       img.card-img-top.rounded-0(
         src!=attributes.imgSrc
         alt="Card"

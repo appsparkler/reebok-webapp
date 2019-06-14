@@ -9,12 +9,12 @@ if process.env.isProd
         data-sly-test.resourceName="xp-container-${resource.name}-${resource.parent.name}"
         data-sly-resource="${ resourceName  @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
 
-  div(
-    data-sly-test="${wcmmode.isEdit}"
-    class="container border border-info" 
-    data-sly-test="${!currentStyle}"
-  )
-    span.badge.badge-info Please update Policy for ${resource.name}
+  sly(data-sly-test="${!currentStyle}")
+    div(
+      data-sly-test="${wcmmode.isEdit}"
+      class="container border border-info"
+    )
+      span.badge.badge-info Please update Policy for ${resource.name}
     
 else 
   

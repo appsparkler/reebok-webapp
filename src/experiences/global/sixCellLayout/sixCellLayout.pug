@@ -33,12 +33,12 @@ if process.env.isProd
             p
               | Topping candy tiramisu souffl&eacute; fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. opping candy tiramisu souffl&eacute; fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. opping candy tiramisu souffl&eacute; fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva fruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halvafruitcake ice cream chocolate bar. Bear claw ice cream chocolate bar donut sweet tart. Pudding cupcake danish apple pie apple pie. Halva
 
-  sly(data-sly-test="${wcmmode.isEdit}")
+  sly(data-sly-test="${!currentStyle}")
     div(
-      class="container border border-info" 
-      data-sly-test="${!currentStyle}"
+      data-sly-test="${wcmmode.isEdit}"
+      class="container border border-info"
     )
-      span.badge.badge-info Please update Policy for ${resource.name}
+        span.badge.badge-info Please update Policy for ${resource.name}
     
 else 
   
