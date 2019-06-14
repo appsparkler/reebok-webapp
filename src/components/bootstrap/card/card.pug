@@ -12,7 +12,10 @@ mixin card(is)
         p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
           if process.env.isProd
             div
-              sly(data-sly-test.buttonResourceName="button-${resource.parent.name}" data-sly-resource="${ buttonResourceName @ resourceType='/apps/reebok/dist/components/bootstrap/button' }")
+              sly(
+                data-sly-test.buttonResourceName="button-${resource.name}-${resource.parent.name}" 
+                data-sly-resource="${ buttonResourceName @ resourceType='/apps/reebok/dist/components/bootstrap/button' }"
+              )
           
           else 
           
