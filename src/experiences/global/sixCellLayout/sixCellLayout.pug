@@ -5,25 +5,35 @@ if process.env.isProd
     class="${currentStyle.outerContainerCSSClass}" 
   )
     div(class="row ${currentStyle.innerContainerCSSClass}")
-      div.col-sm-9.p-0.d-flex.flex-wrap
+      div.col-sm-9.p-0.d-flex.flex-wrap(data-sly-test.resourceName="${resource.name}-${resource.parent.name}")
         // LEFT-SIDE - ROW-1
         div.row.m-0.p-0.w-100
           // CARD 1
           div.col-md-8.p-0.d-flex.p-2.w-100
-            sly(data-sly-resource="${ 'cell1' @ resourceType='/apps/reebok/dist/experiences/global/container' }")
+            sly(
+              data-sly-test.cell1="${resourceName}-cell1"
+              data-sly-resource="${ cell1 @ resourceType='/apps/reebok/dist/experiences/global/container' }")
           // CARD 2
           div.col-md-4.p-0.d-flex.p-2.w-100
-            sly(data-sly-resource="${ 'cell2' @ resourceType='/apps/reebok/dist/experiences/global/container' }")
+            sly(
+              data-sly-test.cell2="${resourceName}-cell2"
+              data-sly-resource="${ cell2 @ resourceType='/apps/reebok/dist/experiences/global/container' }")
         div.row.m-0.p-0.w-100
           // CARD 3
           div.col-md-4.p-0.d-flex.p-2.w-100
-            sly(data-sly-resource="${ 'cell3' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+            sly(
+              data-sly-test.cell3="${resourceName}-cell3"
+              data-sly-resource="${ cell3 @ resourceType='/apps/reebok/dist/experiences/global/container' }")
           // CARD 4
           div.col-md-4.p-0.d-flex.p-2.w-100
-            sly(data-sly-resource="${ 'cell4' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+            sly(
+              data-sly-test.cell4="${resourceName}-cell4"
+              data-sly-resource="${ cell4 @ resourceType='/apps/reebok/dist/experiences/global/container' }")
           // CARD 5
           div.col-md-4.p-0.d-flex.p-2.w-100
-            sly(data-sly-resource="${ 'cell5' @ resourceType='/libs/wcm/foundation/components/responsivegrid' }")
+            sly(
+              data-sly-test.cell5="${resourceName}-cell5"
+              data-sly-resource="${ cell5 @ resourceType='/apps/reebok/dist/experiences/global/container' }")
 
       div.col-sm-3.p-0
         div.bg-white.m-2.p-2.position-absolute.all-0.d-flex.flex-column.border.border-1
